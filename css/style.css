@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(white, lightgray);
+}
+
+header {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+}
+
+
+#car-filters{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    float: left; /*sets filters to the left, creating sidebar*/
+    margin-right: 20px;
+}
+
+#car-listings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.car-option {
+  padding: 15px;
+  height: 350px;
+  width: 450px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color:white;
+  margin: 20px;
+  position:relative;
+  top:0;
+  transition:top ease 0.5s;
+}
+
+/* adds hover affect to each of the car listings*/
+.car-option:hover {
+  top: -10px;
+}
+
+.car-option img{
+  height: 200px;
+  width: 450px;
+  object-fit: cover;
+}
+
+.car-option h3 {
+  font-size: 20px;
+  color: black;
+}
+
+.car-option p {
+  margin: 5px 0;
+  color: gray;
+}
+
+.reset {
+    margin-top: 10px;
+    height: 20px;
+    width: 80px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* adds color effect to reset button*/
+.reset:hover {
+    background-color: gray;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.apply {
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    background-color: white;
+    cursor: pointer; 
+}
+
+/* adds color effect to apply button*/
+.apply:hover {
+    background-color: gray;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-line{
+    display: block;
+    height: 2px;
+    border: 0;
+    width:50%;
+    border-top: 2px solid dimgrey;
+    margin: auto;
+    padding: 0;
+}
+
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Used Car Dealership</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Online Used Car Dealership</h1>
+    </header>
+
+    <main>
+
+        <!--Section including car filters, input fields and reset and apply buttons-->
+        <section id="car-filters">
+
+        <!--Min car year-->
+        <label for="minimum-year">Minimum Year:</label>
+        <input type="number" id="minimum-year" placeholder="ex. 1999">
+
+        <!-- Max car year-->
+         <label for="maximum-year">Maximum Year:</label>
+         <input type="number" id="maximum-year" placeholder="ex. 2015">
+
+         <!--Car Make-->
+          <label for="car-make">Make:</label>
+          <select  id="car-make">
+            <option value="placeholder">Select Make</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Kia">Kia</option>
+          </select>
+
+          <!--Color-->
+          <label for="car-color">Color:</label>
+          <select  id="car-color">
+            <option value="placeholder">Select Color</option>
+            <option value="Silver">Silver</option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Gray">Gray</option>
+            <option value="Green">Green</option>
+          </select>
+          
+          <!--Max Mileage-->
+          <label for="maximum-mileage">Maximum Mileage:</label>
+          <input type="number" id="maximum-mileage" placeholder="ex.250000">
+
+          <!--Min Car Price-->
+          <label for="minimum-price">Minimum Price:</label>
+          <input type="number" id="minimum-price" placeholder="ex. 10000">
+
+          <!--Max Car Price-->
+          <label for="maximum-price">Maximum Price:</label>
+          <input type="number" id="maximum-price" placeholder="ex. 40000">
+
+          <!--Filter Apply Button-->
+          <button onclick="filterApply()" class="apply">Apply Filters</button>
+
+                  <!--Reset Filters Button-->
+          <button onClick="resetFilters()" class="reset">Reset Filters</button>
+
+          </section>
+
+          <!--Section that includes all car listings (car options)-->
+          <section id="car-listings">
+
+          <div class="car-option">
+            <img src="./assets/Toyota-Camry.png" alt="Your browser does not support this image">
+            <h3>2018 Toyota Camry</h3>
+            <p>Mileage: 30000 miles</p>
+            <p>Color: Silver</p>
+            <p>Gas Mileage: 25 mpg city, 35 mpg highway</p>
+            <p>Price: 18000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Honda-Civic.png" alt="Your browser does not support this image">
+            <h3>2016 Honda Civic</h3>
+            <p>Mileage: 45000 miles</p>
+            <p>Color: White</p>
+            <p>Gas Mileage: 30 mpg city, 40 mpg highway</p>
+            <p>Price: 14000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Ford-Fusion.png" alt="Your browser does not support this image">
+            <h3>2017 Ford Fusion</h3>
+            <p>Mileage: 35000 miles</p>
+            <p>Color: Black</p>
+            <p>Gas Mileage: 28 mpg city, 38 mpg highway</p>
+            <p>Price: 16000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Nissan-Altima.png" alt="Your browser does not support this image">
+            <h3>2019 Nissan Altima</h3>
+            <p>Mileage: 25000 miles</p>
+            <p>Color: Blue</p>
+            <p>Gas Mileage: 27 mpg city, 36 mpg highway</p>
+            <p>Price: 17000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Chevrolet-Malibu.png" alt="Your browser does not support this image">
+            <h3>2015 Chevrolet Malibu</h3>
+            <p>Mileage: 50000 miles</p>
+            <p>Color: Red</p>
+            <p>Gas Mileage: 25 mpg city, 37 mpg highway</p>
+            <p>Price: 12000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Volkswagon-Passat.png" alt="Your browser does not support this image">
+            <h3>2016 Volkswagen Passat</h3>
+            <p>Mileage: 40000 miles</p>
+            <p>Color: Gray</p>
+            <p>Gas Mileage: 29 mpg city, 40 mpg highway</p>
+            <p>Price: 15000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Hyundai-Elantra.png" alt="Your browser does not support this image">
+            <h3>2020 Hyundai Elantra</h3>
+            <p>Mileage: 22000 miles</p>
+            <p>Color: Silver</p>
+            <p>Gas Mileage: 30 mpg city, 41 mpg highway</p>
+            <p>Price: 16000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Subaru-Outback.png" alt="Your browser does not support this image">
+            <h3>2014 Subaru Outback</h3>
+            <p>Mileage: 60000 miles</p>
+            <p>Color: Green</p>
+            <p>Gas Mileage: 22 mpg city, 30 mpg highway</p>
+            <p>Price: 14000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Mazda-CX.png" alt="Your browser does not support this image">
+            <h3>2017 Mazda CX-5</h3>
+            <p>Mileage: 32000 miles</p>
+            <p>Color: Blue</p>
+            <p>Gas Mileage: 24 mpg city, 31 mpg highway</p>
+            <p>Price: 19000</p>
+          </div>
+
+          <div class="car-option">
+            <img src="./assets/Kia-Sorento.png" alt="Your browser does not support this image">
+            <h3>2018 Kia Sorento</h3>
+            <p>Mileage: 28000 miles</p>
+            <p>Color: White</p>
+            <p>Gas Mileage: 22 mpg city, 29 mpg highway</p>
+            <p>Price: 17000</p>
+          </div>
+
+          </section>
+
+    </main>
+    
+</body>
+
+<!--footer including copyright information-->
+<footer>
+    <br />
+    <br />
+    <hr class="footer-line" />
+    <br />
+    <br />
+    <span>© 2024 Used Car Dealership. All rights reserved.</span>
+</footer>
+
+<script src="./js/usedCars.js" defer></script>
+<script src="./js/script.js" defer></script>
+
+</html>

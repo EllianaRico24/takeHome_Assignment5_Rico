@@ -27,7 +27,7 @@ function filterApply() {
 
 //checks each car against the filter criteria (skips if filter is left blank)
   let filteredCars = usedCars.filter((car) => {
-    const match =
+    const check =
       (!minimumYear || car.year >= minimumYear) &&
       (!maximumYear || car.year <= maximumYear) &&
       (!carMake.length || carMake.includes(car.make)) &&
@@ -35,6 +35,7 @@ function filterApply() {
       (!maximumMileage || car.mileage <= maximumMileage) &&
       (!minimumPrice || car.price >= minimumPrice) &&
       (!maximumPrice || car.price <= maximumPrice);
+    return check;
   });
 
 //displays the filtered cars on the page

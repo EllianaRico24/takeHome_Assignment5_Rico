@@ -102,5 +102,5 @@ const usedCars = [
   },
 ];
 
-module.exports = usedCars;
+//module.exports = usedCars;
 
